@@ -1,15 +1,18 @@
 import Header from "./components/common/Header";
 import Loading from "./components/common/Loading";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Protected/Home";
+import Search from "./pages/Protected/Search";
+import Error from "./pages/Error";
 const App = () => {
   return (
     <>
     <BrowserRouter>
     <Header />
     <Routes>
-      <Route exact path="/" element={ <h1>Home</h1> } />
-      <Route exact path="/contact" element={ <h1>Contact</h1> } />
-      <Route exact path="/user" element={ <h1>User Profile</h1> } />
+      <Route exact path="/" element={ <Home /> } />
+      <Route exact path="/search" element={ <Search /> } />
+      <Route exact path="*" element={ <Error /> } />
     </Routes>
     </BrowserRouter>
       

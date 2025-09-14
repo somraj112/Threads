@@ -5,6 +5,7 @@ import { TbEdit } from "react-icons/tb";
 import { CiHeart } from "react-icons/ci";
 import { RxAvatar } from "react-icons/rx";
 import { FiArrowLeft } from "react-icons/fi";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
@@ -14,8 +15,13 @@ const Navbar = () => {
         justifyContent={"space-around"}
         alignItems={"center"}
       >
-        <GoHomeFill size={32} />
-        <IoIosSearch size={32} />
+        <Link to={'/'} >
+            <GoHomeFill size={32} />
+        </Link>
+        <Link to={'/search'} >
+            <IoIosSearch size={32} />
+        </Link>
+        
         <TbEdit size={32} />
         <CiHeart size={32} />
         <RxAvatar size={32} />
